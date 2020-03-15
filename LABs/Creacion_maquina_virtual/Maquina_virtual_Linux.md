@@ -1,4 +1,4 @@
-# Creación de ia máquina virtual Linux con la CLI de Azure
+# Creación de una máquina virtual Linux con el CLI de Azure
 
 En esta pequeña guía vamos a ver como instalamos una máquina virtual Ubuntu en Azure. El guón que vamos a seguir es el siguiente:
 
@@ -115,9 +115,9 @@ vthot4@labcell:~/azure_lab/LABs$ az vm open-port --port 80 --resource-group LAB_
 ....................................
 ```
 
-4. Instalación de un servidor web para realizar pruebas.
+## 4. Instalación de un servidor web para realizar pruebas.
 
-Ahora vamos a instalar un servidor nginx para comprobar que todo funcoina correctamente.
+Ahora vamos a instalar un servidor nginx para comprobar que todo funciona correctamente.
 
 ```bash
 
@@ -132,7 +132,7 @@ Una vez instalado podemos comprobar el resultado de la siguiente forma:
 </p>
 
 
-5. Limpieza de recursos.
+## 5. Limpieza de recursos.
 
 La limpieza de recursos esrelativamente sencilla, ya que bastará con eliminar el grupo de recursos que creamos al principio.
 
@@ -142,7 +142,9 @@ Are you sure you want to perform this operation? (y/n): y
 ```
 
 
-6. Script sencillo.
+## 6. Script sencillo.
+
+Con este sencillo script podemos realizar todas las pruebas de forma ágil. 
 
 ```bash
 #!/bin/bash
@@ -241,11 +243,6 @@ case $1 in
 esac
 
 ```
-
-
-
-
-
 
 
 ## Bibliografía
