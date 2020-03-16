@@ -1,6 +1,6 @@
 # Administración Básica máquinas virtuales.
 
-# Obtener información de la máuqina virtual
+## Obtener información de la máquina virtual
 
 - **Enumeración de máquinas virtuales.**
 ```bash
