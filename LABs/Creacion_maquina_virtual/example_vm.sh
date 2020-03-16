@@ -84,7 +84,7 @@ case $1 in
         ;;
 
 	delete)
-		echo " Deletng AKS cluster ........ "
+		echo " Deleting VM and resource group ........ "
 		az group delete --name $RESOURCE_NAME
 		;;
 
