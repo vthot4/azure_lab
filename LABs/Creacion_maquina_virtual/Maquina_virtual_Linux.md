@@ -247,3 +247,4 @@ esac
 
 ## Bibliografía
 - https://docs.microsoft.com/es-es/azure/virtual-machines/linux/quick-create-cli
+- https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az-vm-create
