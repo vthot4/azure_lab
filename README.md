@@ -4,5 +4,5 @@ El presente repositorio no es más que un conjunto de notas de todas las pruebas
 
 ## LABS
 - [Creación de una máquina virtual](./LABs/Creacion_maquina_virtual/readme.md)
-- Azure containers.
+- [Azure containers.](./Azure_container_Registry/readme.md)
 - AKS.
