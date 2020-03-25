@@ -1,3 +1,34 @@
+# Ejercicio: Implementación de Azure Container Registry
+
+Source: https://docs.microsoft.com/es-es/learn/modules/build-and-store-container-images/2-deploy-azure-container-registry
+
+En el enlace anterior nos enseñan a realizar un lab sencillo que consta de los siguientes pasos:
+
+1. Creación de una instancia de Azure Container Registry.
+2. Creación de una imagen de contenedor con Azure Container Registry Tasks.
+3. Comprobación de la imagen.
+4. Habilitación de la cuenta de administrador del registro.
+5. Implementación de un contenedor con la CLI de Azure.
+6. Cree una región replicada para una instancia de Azure Container Registry.
+7. Limpieza de recursos.
+
+ToDo ---> Explicación completa del ejemplo.
+
+Aunque no he tenido tiempo de transcribir el lab, si que he procedido a crear un script que nos permitirá ejecutar todas las fases descritas menos la de replicación. 
+
+```bash
+vthot4@labcell:~/azure_lab/LABs/Azure_container_Registry$ ./acr_lab.sh 
+
+./acr_lab.sh usage:
+
+  create      Creación Grupo de recursos y Registro de contenedores
+  image       Creamos la imagen y la subimos al repositorio
+  example     Habilita las cuentas de administración y lanza el contenedor en azure,recogemos IP para la prueba
+  delete      Borra el grupo de recursos
+```
+El script es el siguiente:
+
+```bash
 #!/bin/bash
 #################################################################################
 ##
@@ -12,7 +43,7 @@
 LOGFILE="acr_lab.log"
 
 AZ_RESOURCE="LAB_vthot4"  ##  Conjunto de recursos
-AZ_ACR_NAME="acrlab"
+AZ_ACR_NAME="vacrlab"
 AZ_LOCATION="northeurope"
 
 log(){
@@ -112,4 +143,8 @@ case "$1" in
 
 esac
 
+
+
+
+```
 
