@@ -43,8 +43,9 @@ El script es el siguiente:
 LOGFILE="acr_lab.log"
 
 AZ_RESOURCE="LAB_vthot4"  ##  Conjunto de recursos
-AZ_ACR_NAME="vacrlab"
+AZ_ACR_NAME="acrlab"
 AZ_LOCATION="northeurope"
+AZ_AZR_USER="vthot4"
 
 log(){
     echo `date +%R:%S"-"%d%m%Y`" " "$1" |tee -a $LOGFILE
@@ -111,7 +112,7 @@ case "$1" in
         az acr update -n $AZ_ACR_NAME --admin-enabled true
 
         ## Recuperamos el nombre de usuario y claves
-        passsword=$(az acr credential show --name gurefish |jq '.passwords[0] .value'|grep -v null|sed -e 's/^.//' -e 's/.$//')
+        passsword=$(az acr credential show --name $AZ_ACR_NAME |jq '.passwords[0] .value'|grep -v null|sed -e 's/^.//' -e 's/.$//')
         
         ##echo $passsword
 
@@ -124,7 +125,7 @@ case "$1" in
         --registry-login-server $AZ_ACR_NAME.azurecr.io \
         --ip-address Public \
         --location $AZ_LOCATION \
-        --registry-username gurefish \
+        --registry-username $AZ_AZR_USER \
         --registry-password $passsword
 
         ## Obtenemos la IP pública de pruebas.
@@ -142,9 +143,6 @@ case "$1" in
         ;;
 
 esac
-
-
-
 
 ```
 
